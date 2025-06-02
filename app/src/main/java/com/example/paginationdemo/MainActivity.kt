@@ -48,8 +48,6 @@ class MainActivity : AppCompatActivity() {
             response?.let {
                 users.addAll(it.users)
                 totalCount = it.pagination.total
-                val fullData = ArrayList<String>()
-
                 adapter.notifyDataSetChanged()
                 Log.d(TAG, "Fetched users: ${users.size}")
             }
